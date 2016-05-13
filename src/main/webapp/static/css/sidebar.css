@@ -1,0 +1,16 @@
+/* Sidebar */
+#sidebar {
+    height: 700px;
+    border-right-style: solid;
+    border-right-width: 2px;
+    border-color: #EEEEEE;
+}
+
+#profile-img {
+    float: left;
+    margin-right: 10px;
+}
+.sidebar-btn {
+    color: black;
+    text-align: left;
+}

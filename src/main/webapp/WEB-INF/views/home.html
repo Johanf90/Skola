@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Home</title>
+    <meta id="_csrf" name="_csrf" th:content="${_csrf.token}"/>
+    <meta id="_csrf_header" name="_csrf_header" th:content="${_csrf.headerName}"/>
+    <link href="/static/css/bootstrap.css" rel="stylesheet" type="text/css"/>
+    <link href="/static/css/main.css" rel="stylesheet" type="text/css"/>
+    <link href="/static/css/navbar.css" rel="stylesheet" type="text/css"/>
+    <link href="/static/css/sidebar.css" rel="stylesheet" type="text/css"/>
+    <link href="/static/css/profile.css" rel="stylesheet" type="text/css"/>
+    <link href="/static/css/messages.css" rel="stylesheet" type="text/css"/>
+    <link href="/static/css/friends.css" rel="stylesheet" type="text/css"/>
+    <link href="/static/css/photos.css" rel="stylesheet" type="text/css"/>
+    <script src="/static/js/jquery.1.10.2.min.js"></script>
+    <script src="http://malsup.github.io/jquery.form.js"></script>
+    <script src="/static/js/photos.js"></script>
+    <script src="/static/js/sidebar.js"></script>
+    <script src="/static/js/messages.js"></script>
+    <script src="/static/js/friends.js"></script>
+    <script src="/static/js/users.js"></script>
+</head>
+<body>
+<input type="hidden" id="id"/>
+<input type="hidden" id="current-user"/>
+<!-- NAVBAR -->
+<nav class="navbar navbar-default">
+    <ul class="nav navbar-nav">
+        <form class="navbar-form navbar-center" role="search">
+            <div class="form-group">
+                <input type="text" class="form-control" id="searchBar" placeholder="Find users"/>
+            </div>
+            <button type="submit" class="btn btn-default">Search</button>
+        </form>
+    </ul>
+</nav>
+
+<!-- CONTAINER -->
+<div class="container">
+    <div class="row">
+
+        <!-- SIDEBAR -->
+        <div class="col-sm-3" id="sidebar">
+            <img th:src="@{/static/images/smiley.png}" alt="Homer" width="42" height="42" id="profile-img"/>
+            <div id="user">
+                <span><h5 id="first-name"></h5></span>
+                <span><h5 id="last-name"></h5></span>
+            </div>
+            <hr/>
+            <div class="btn-group-vertical">
+                <a id="sidebar-btn-messages" class="btn sidebar-btn">Messages</a>
+                <a id="sidebar-btn-friends" class="btn sidebar-btn">Friends</a>
+                <a id="sidebar-btn-photos" class="btn sidebar-btn">Photos</a>
+
+            </div>
+            <hr/>
+            <h5>Friends</h5>
+        </div>
+
+        <!-- CONTENT -->
+        <div class="col-sm-9">
+
+            <!-- PROFILE -->
+            <div id="profile-content">
+                <img th:src="@{/static/images/smiley2.png}" alt="profile-picture" id="profile-picture" width="120" height="120"/>
+                <div id="name">
+                    <span><h5 id="profile-first-name"></h5></span>
+                    <span><h5 id="profile-last-name"></h5></span>
+                </div>
+                <button type="button" id="btn-add-friend">Add friend</button>
+                <div id="profile-header-links" class="btn-group-horizontal">
+                    <a id="profile-btn-messages" class="btn sidebar-btn">Messages</a>
+                    <a id="profile-btn-friends" class="btn sidebar-btn">Friends</a>
+                    <a id="profile-btn-photos" class="btn sidebar-btn">Photos</a>
+                </div>
+                <hr/>
+            </div>
+
+            <!-- Messages/friends/photos -->
+            <div id="user-content"></div>
+
+        </div> <!-- /content -->
+
+    </div> <!-- /row -->
+</div><!-- /container -->
+
+
+
+
+</body>
+</html>

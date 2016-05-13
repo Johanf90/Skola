@@ -1,0 +1,59 @@
+#user-content {
+    width: 540px;
+    height: 500px;
+    overflow-y: auto;
+}
+
+.form-write-message {
+    display: none;
+    width: 500px;
+}
+
+.write-message-text {
+    width: 500px;
+}
+
+.message {
+    width: 500px;
+    overflow: hidden;
+    max-height: 600px;
+    /*background-color: blue;*/
+}
+
+.message-left {
+    width: 50px;
+    float: left;
+}
+.message-img {
+    float: left;
+}
+
+.message-center {
+    width: 450px;
+    /*background-color: yellow;*/
+    /*clear: right;*/
+    float: left;
+}
+.message-sender {
+    color: #4e69a2;
+    font-weight: bold;
+}
+.message-date{
+    color: gray;
+    float:right;
+}
+.message-content {
+    width: 440px;
+    margin-top: 5px;
+    /*background-color: green;*/
+}
+.buttons {
+    float: right;
+}
+
+.btn-accept {
+    background-color: green;
+}
+.btn-decline {
+    background-color: red;
+}

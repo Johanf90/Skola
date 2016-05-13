@@ -1,0 +1,27 @@
+#btn-add-friend {
+    display: none;
+}
+
+.friend {
+    width: 500px;
+    overflow: hidden;
+    max-height: 600px;
+    /*background-color: blue;*/
+}
+.friend-left {
+    width: 50px;
+    float: left;
+}
+
+.friend-img {
+    float: left;
+}
+
+.friend-center {
+    width: 450px;
+    float: left;
+}
+.friend-name {
+    color: #4e69a2;
+    font-weight: bold;
+}

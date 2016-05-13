@@ -1,0 +1,32 @@
+body, html {
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+hr {
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+p {
+    display: block;
+    word-break: break-all;
+    white-space: pre-line;
+}
+button {
+    padding-left: 15px;
+    padding-right: 15px;
+    color: white;
+    background-color: #4e69a2;
+    font-weight: bold;
+    font-size: 13px;
+    border: 0px;
+}
+span {
+    display: inline-block;
+}
+
+.float-right {
+    float: right;
+}
+.float-left {
+    float:left;
+}

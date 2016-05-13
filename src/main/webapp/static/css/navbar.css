@@ -1,0 +1,15 @@
+/* Navbar */
+.navbar {
+    background-color: #4e69a2;
+}
+.navbar-center {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    text-align: center;
+}
+
+#searchBar {
+    width: 250px;
+}
