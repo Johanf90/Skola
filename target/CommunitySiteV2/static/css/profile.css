@@ -1,0 +1,10 @@
+#profile {
+    height: 200px;
+}
+#profile-picture {
+    float: left;
+    margin-right: 15px;
+}
+#name {
+    padding-top: 100px;
+}

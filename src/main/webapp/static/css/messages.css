@@ -52,8 +52,9 @@
 }
 
 .btn-accept {
-    background-color: green;
+    background-color: limegreen;
+    margin-right: 5px;
 }
 .btn-decline {
-    background-color: red;
+    background-color: #b30000;
 }

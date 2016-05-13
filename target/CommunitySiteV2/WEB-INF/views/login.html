@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+<head>
+
+    <meta id="_csrf" name="_csrf" th:content="${_csrf.token}"/>
+    <meta id="_csrf_header" name="_csrf_header" th:content="${_csrf.headerName}"/>
+    <title>Login</title>
+    <link href="/static/css/bootstrap.css" rel="stylesheet" type="text/css"/>
+    <link href="/static/css/login.css" rel="stylesheet" type="text/css"/>
+    <link href="/static/css/signup.css" rel="stylesheet" type="text/css"/>
+
+</head>
+<body>
+    <div class="container">
+        <div id="loginBox">
+            <form id="login-form" class="form-signin">
+
+                <h2 class="form-signin-heading">Please sign in</h2>
+
+                <label class="sr-only" for="email">email</label>
+                <input id="usernameLogin" name="email" class="form-control" type="text" placeholder="E-mail"/>
+
+                <label class="sr-only" for="password">password</label>
+                <input id="passwordLogin" name="password" class="form-control" type="password" placeholder="Password"/>
+
+                <div class="checkbox">
+                    <label>
+                        <input type="checkbox" value="Remember me"/>
+                        Remember me
+                    </label>
+                </div>
+
+                <button id="login-btn" class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+
+                <div class="bottomText">
+                    <p id="bottomText">Not a member yet?</p>
+                    <a data-toggle="modal" href="#myModal" id="signUpLink">Sign up now!</a>
+                </div>
+
+            </form>
+        </div>
+
+        <div id="myModal" class="modal">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <span class="close">X</span>
+                    <form class="form-signup" id="regForm">
+                        <h2 class="form-signin-heading">Sign up</h2>
+
+                        <hr class="line"/>
+
+                        <label class="sr-only" for="email">email</label>
+                        <input id="email" name="email" class="form-control" type="text" placeholder="Email"/>
+
+                        <label class="sr-only" for="firstName">firstname</label>
+                        <input id="firstName" name="firstName" class="form-control" type="text" placeholder="First name"/>
+
+                        <label class="sr-only" for="lastName">lastname</label>
+                        <input id="lastName" name="lastName" class="form-control" type="text" placeholder="Last name"/>
+
+                        <label class="sr-only" for="password">password</label>
+                        <input id="password" name="password" class="form-control" type="password" placeholder="Password"/>
+
+                        <label class="sr-only" for="password2">password</label>
+                        <input id="password2" class="form-control" type="password" placeholder="Password again"/>
+
+                        <button id="signup" class="btn btn-lg btn-primary btn-block" type="submit">Sign Up</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="/static/js/jquery.1.10.2.min.js"></script>
+    <script src="/static/js/script.js"></script>
+    <script src="/static/js/login.js"></script>
+
+</body>
+</html>
